@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Repository;
 
 import com.in28minutes.springboot.jdbc.h2.example.student.Student;
 
@@ -22,6 +23,7 @@ class Studentrowmapper implements RowMapper<Student> {
 
 }
 
+@Repository
 public class StudentRepopsitory {
 	@Autowired
 	JdbcTemplate jdbctemplate;

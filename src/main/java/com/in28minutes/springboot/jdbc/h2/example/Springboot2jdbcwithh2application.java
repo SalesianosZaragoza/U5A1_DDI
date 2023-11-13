@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.in28minutes.springboot.jdbc.h2.example.repopsitory.StudentRepopsitory;
@@ -12,13 +13,13 @@ import com.in28minutes.springboot.jdbc.h2.example.student.Student;
 @SpringBootApplication
 public class Springboot2jdbcwithh2application implements CommandLineRunner {
 
-	private Logger logger = LoggerFactory.getlogger(this.getClass());
+	private Logger logger = LoggerFactory.getLogger(this.getClass());
 
 	@Autowired
 	StudentRepopsitory repository;
 
 	public static void main(String[] args) {
-		springapplication.run(Springboot2jdbcwithh2application.class, args);
+		SpringApplication.run(Springboot2jdbcwithh2application.class, args);
 	}
 
 	@Override
